@@ -15,7 +15,6 @@ class UserLoginController extends GetxController {
       LoginPhoneNumberModel loginApi = LoginPhoneNumberModel.fromJson(resp);
       print("loginapi$loginApi");
     userData.value =loginApi;
-    print("loginapi${loginApi.otp}"); print("loginapi${phoneNumber}");
 
   }
 }

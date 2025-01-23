@@ -50,9 +50,9 @@ class GridItem extends StatelessWidget {
                 top: 8, // Adjust the top position as needed
                 right: 8, // Adjust the right position as needed
                 child: GetX<ProductApiController>(
+
                   builder: (ProductApiController controller){
                     bool iswishList=controller.recentData.value.where((element) => element.id == id).toList().first.inWishlist ?? false;
-
                     return InkWell(
                         onTap: () async {
                           await ApiServices.addtoWishList(id.toString());

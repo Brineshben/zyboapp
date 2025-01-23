@@ -14,7 +14,6 @@ class ProductApiController extends GetxController {
     await ApiServices.productDetails();
     print("respppp$resp");
 
-
     recentData.value = resp.map((e) => ProductListModel.fromJson(e)).toList();
     recentDataCopy.value = recentData.value;
   }
@@ -24,6 +23,5 @@ class ProductApiController extends GetxController {
     await ApiServices.searchData(SearchData);
 
     recentData.value = resp.map((e) => ProductListModel.fromJson(e)).toList();
-
   }
 }
